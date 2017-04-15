@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Style Transform</title>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/jquery.form.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnSubmit').submit(function () {
+                $(this).ajaxSubmit();
+                return false;
+            });
+        });
+        $(document).ready(function () {
+            $('#styleSubmit').submit(function () {
+                $(this).ajaxSubmit();
+                return false;
+            });
+        })
+    </script>
+</head>
+<body>
+<form id="upload" enctype="multipart/form-data" action="/upload/" method="post">
+    <p>
+        Original Image
+        <input type="file" name="imgUploader" multiple />
+        <input type="submit" name="submit" id="imgSubmit" value="Upload" />
+    </p>
+    <p>
+        Change Style
+        <input type="file" name="styleUploader" multiple />
+        <input type="submit" name="submit" id="styleSubmit" value="Upload" />
+    </p>
+
+</form>
+</body>
+</html>
